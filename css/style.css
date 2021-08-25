@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf")
+ }
+ h1,h2,h3{font-family: "OpenSans";}
+header {
+  text-align: center;
+}
+
+.bg-pan-right{-webkit-animation:bg-pan-right 8s both;animation:bg-pan-right 8s both}
+@-webkit-keyframes bg-pan-right{0%{background-position:0 50%}100%{background-position:100% 50%}}@keyframes bg-pan-right{0%{background-position:0 50%}100%{background-position:100% 50%}}
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+main {
+  margin-top: 36px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header ul {
+  padding-left: 0;
+}
+
+header li {
+  list-style-type: none;
+}
+
+header li:not(:nth-of-type(3)) {
+  background-color: #e9e9e9;
+  padding: 5px 20px;
+  margin: 1px;
+}
+
+header input:checked ~ nav ul li:nth-of-type(3) {
+  display: none;
+}
+
+header li:not(:nth-of-type(3)):hover {
+  background-color: #e9e9e9;
+}
+
+header ul {
+  padding-right: 0;
+}
+
+header input {
+  display: none;
+}
+header input:not(:checked) ~ nav {
+  max-height: 6px;
+  overflow: hidden;
+}
+header label {
+  font-size: 26px;
+}
+
+body {
+  font-family: Verdana;
+}
+
+h3 {
+  margin-top: 0%;
+}
+a {
+  text-decoration: none;
+}
+
+article {
+  display: block;
+}
+
+.focus,
+.inlineblock,
+.grid {
+  background-color: #e9e9e9;
+  padding: 20px 0;
+}
+.focus article {
+  background-color: #ffff;
+  padding: 20px;
+}
+.focus p {
+  margin-bottom: 0;
+}
+img {
+  border-style: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.float,
+.flex {
+  background-color: #cfcfcf;
+  padding: 20px 0;
+}
+
+.clearfix::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.float h2,
+.inlineblock h2,
+.flex h2,
+.grid h2 {
+  padding: 5px 20px;
+  border: 1px inset;
+  display: inline-block;
+}
+
+.float article div,
+.inlineblock article div,
+.flex article div,
+.focus article div,
+.grid article div {
+  padding: 20px;
+}
+
+.flex section > div {
+  flex-basis: 100%;
+}
+
+.grid article,
+.flex article,
+.float article,
+.inlineblock article {
+  background-color: white;
+}
+
+.grid section > div {
+  grid-column: 1 / -1;
+}
+.grid section article div {
+  padding: 20px;
+}
+.video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  position: relative;
+}
+.video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ifram {
+  border: none;
+}
+
+footer {
+  background-color: #e9e9e9;
+  padding: 20px;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: whitesmoke;
+}
+
+footer a {
+  color: black;
+}
+
+footer li:hover {
+  color: white;
+  background-color: black;
+}
+
+footer li:hover a {
+  color: white;
+  background-color: black;
+}
+
+.flex article,
+.inlineblock article,
+.float article {
+  margin-top: 20px;
+}
+
+section:hover article:hover {
+  opacity: 5;
+}
+
+section:hover article {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+.diapo {
+  overflow: hidden;
+}
+.diapo figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: monanimation 20s alternate; 
+}
+.diapo figure img { 
+  width: 20%; 
+  float: left; 
+}
+
+@keyframes bidule{
+  0%{top:0;left:50%;}
+  25%{top:50%;left:100%;}
+  50%{top:100%;left:50%;}
+  75%{top:50%;left:0;}
+  100%{top:0;left:50%;}
+}
+
+@keyframes monanimation {
+  0% { left: 0%; }
+  16% { left: 0%; }
+
+  21% { left: -100%; }
+  37% { left: -100%; }
+
+  42% { left: -200%; }
+  56% { left: -200%; }
+
+  61% { left: -300%; }
+  77% { left: -300%; }
+
+  82% { left: -400%; }
+  100% { left: -400%; }
+}
+
+
+@media screen and (min-width: 576px) {
+  .float article,
+  .inlineblock article {
+    margin-left: 20px;
+  }
+  .flex section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .float article {
+    float: left;
+  }
+  .inlineblock article {
+    display: inline-block;
+    vertical-align: top;
+  }
+  header li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .float article,
+  .inlineblock article,
+  .flex article {
+    width: calc(50% - 10px);
+  }
+  .grid section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .float article,
+  .inlineblock article {
+    margin-left: 20px;
+  }
+
+  .float article:nth-of-type(2n + 1),
+  .inlineblock article:nth-of-type(2n + 1) {
+    margin-left: 0;
+  }
+
+  header label {
+    display: none;
+  }
+  header input:not(:checked) ~ nav {
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  header {
+    position: static;
+  }
+  main {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .focus img {
+    float: left;
+    margin-right: 20px;
+    width: 50%;
+  }
+  .grid section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .flex article,
+  .float article,
+  .inlineblock article {
+    width: calc(33.33% - 13.33px);
+  }
+
+  .float article:nth-of-type(2n + 1),
+  .inlineblock article:nth-of-type(2n + 1) {
+    margin-left: 20px;
+  }
+
+  .float article:nth-of-type(3n + 1),
+  .inlineblock article:nth-of-type(3n + 1) {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flex article,
+  .float article,
+  .inlineblock article {
+    width: calc(25% - 15px);
+  }
+  .grid section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .float article:nth-of-type(3n + 1),
+  .inlineblock article:nth-of-type(3n + 1) {
+    margin-left: 20px;
+  }
+
+  .float article:nth-of-type(4n + 1),
+  .inlineblock article:nth-of-type(4n + 1) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .flex article,
+  .float article,
+  .inlineblock article {
+    width: calc(20% - 16px);
+  }
+  .grid section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .float article:nth-of-type(4n + 1),
+  .inlineblock article:nth-of-type(4n + 1) {
+    margin-left: 20px;
+  }
+
+  .float article:nth-of-type(5n + 1),
+  .inlineblock article:nth-of-type(5n + 1) {
+    margin-left: 0px;
+  }
+}

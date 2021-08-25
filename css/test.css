@@ -1,0 +1,43 @@
+@keyframes bidule{
+    0%{top:0;left:50%;}
+    25%{top:50%;left:100%;}
+    50%{top:100%;left:50%;}
+    75%{top:50%;left:0;}
+    100%{top:0;left:50%;}
+  }
+  
+  .focus:hover img{transform:rotate(180deg);transition:.5s;}
+  
+  
+  .diapo {
+    overflow: hidden;
+  }
+  .diapo figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: monanimation 20s alternate infinite; 
+  }
+  .diapo figure img { 
+    width: 20%; 
+    float: left; 
+  }
+  @keyframes monanimation {
+    0% { left: 0%; }
+    16% { left: 0%; }
+  
+    21% { left: -100%; }
+    37% { left: -100%; }
+  
+    42% { left: -200%; }
+    56% { left: -200%; }
+  
+    61% { left: -300%; }
+    77% { left: -300%; }
+  
+    82% { left: -400%; }
+    100% { left: -400%; }
+  }
